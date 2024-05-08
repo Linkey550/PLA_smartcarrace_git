@@ -1,0 +1,814 @@
+建议用户需要添加自己的代码文件的时候，将文件存放在CODE文件夹下
+不要再创建子文件夹，直接将代码文件放在CODE文件夹里面就行
+然后工程里面添加文件即可编译
+圆环：
+判断条件（&& Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
+    && Right_Black_Point[(Left_Up_Point[1]+105)/2] <  Right_Black_Point[105]
+    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])]
+    && Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
+    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_two_third(105,Left_Up_Point[1])]
+    && Right_Black_Point[Emo_two_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
+    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[105]
+    && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 10] == EmoWhite
+    && Emo_imag[Left_Up_Point[1] - 1][Left_Up_Point[0] - 10] == EmoWhite
+    && Left_Black_Point[112] == 0 && Left_Black_Point[113] == 0 && Left_Black_Point[115] == 0）
+    
+    
+    
+    
+
+//    else if(dieReady == 2 && CornerLeft_flag == 0 && CornerRight_flag == 0 && Corners_flag == 0  && findrcount >= 12
+//    && Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Right_Up_Point[1] >= 25 && Right_Up_Point[1] <= 66 && Right_Up_Point[0] < 165 && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 0
+//    && WindupL_flag == 0 && WindupR_flag == 0
+//    && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
+//    && Garage_flag == 0 && Garage_flag == 0 && Cross_flag == 0 && Trifork_flag == 0
+//     && CornerS_flag == 0
+//    && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[(Right_Up_Point[1]+105)/2]
+//    && Left_Black_Point[(Right_Up_Point[1]+105)/2] >  Left_Black_Point[105]
+//    && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[Emo_one_third(105,Right_Up_Point[1])]
+//    && Left_Black_Point[Emo_one_third(105,Right_Up_Point[1])] >  Left_Black_Point[105]
+//    && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[Emo_two_third(105,Right_Up_Point[1])]
+//    && Left_Black_Point[Emo_two_third(105,Right_Up_Point[1])] >  Left_Black_Point[105]
+//    && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[105]
+//    && Left_Black_Point[10] > Left_Black_Point[Right_Up_Point[1]] && Left_Black_Point[10] > Left_Black_Point[(Right_Up_Point[1]+10)/2]
+//    && Right_Black_Point[Right_Up_Point[1]] <= Right_Black_Point[Right_Up_Point[1]+1] && Right_Black_Point[Right_Up_Point[1]+1] <= Right_Black_Point[Right_Up_Point[1]+2]
+//    && Right_Black_Point[Right_Up_Point[1]+2] <= Right_Black_Point[Right_Up_Point[1]+3] && Right_Black_Point[Right_Up_Point[1]+3] <= Right_Black_Point[Right_Up_Point[1]+4]
+//    && Right_Black_Point[Right_Up_Point[1]+4] <= Right_Black_Point[Right_Up_Point[1]+5] && Right_Black_Point[Right_Up_Point[1]+5] <= Right_Black_Point[Right_Up_Point[1]+6]
+//    && Right_Black_Point[Right_Up_Point[1]] < Right_Black_Point[Right_Up_Point[1]+5] && Right_Black_Point[Right_Up_Point[1]+1] < Right_Black_Point[Right_Up_Point[1]+6]
+//    && Right_Black_Point[Right_Up_Point[1]] < Right_Black_Point[Right_Up_Point[1]+8] && Right_Black_Point[Right_Up_Point[1]+1] < Right_Black_Point[Right_Up_Point[1]+9]
+//    && Right_Black_Point[Right_Up_Point[1]] < Right_Black_Point[Right_Up_Point[1]+11] && Right_Black_Point[Right_Up_Point[1]+1] < Right_Black_Point[Right_Up_Point[1]+12])
+//    {
+//        for(uint8 y=Right_Up_Point[1] - 3;y>=5;y--)
+//        {
+//            if(circlrsu == 0 && Right_Black_Point[y] <= Right_Black_Point[y-1] && Right_Black_Point[y-1] <= Right_Black_Point[y-2] && Right_Black_Point[y] < Right_Black_Point[y-2] )
+//            {
+//                circlrsu = 1;
+//            }
+//            if(circlrsu == 1)
+//            {
+//                if(Right_Black_Point[y] <= 187 && Right_Black_Point[y-1] >= 177 && Right_Black_Point[y-2] >= 177)
+//                {
+//                    CircleRight_flag = 1;
+////                    Circlecount = 12;
+//                    //CircleBig = 1;
+//                    circlrsu = 0;
+//                    break;
+//                }
+//            }
+//            if(y == 5)
+//            {
+//                circlrsu = 0;
+//                break;
+//            }
+//
+//        }
+//    }
+//    else if(dieReady == 2 && CornerLeft_flag == 0 && CornerRight_flag == 0 && Corners_flag == 0  && findlcount >= 12
+//    && Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 0 && Left_Up_Point[1] >= 25 && Left_Up_Point[1] <= 66 && Left_Up_Point[0] > 25 && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
+//    && WindupL_flag == 0 && WindupR_flag == 0
+//    && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
+//    && Garage_flag == 0 && Garage_flag == 0 && Cross_flag == 0 && Trifork_flag == 0 && CornerS_flag == 0
+//    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
+//    && Right_Black_Point[(Left_Up_Point[1]+105)/2] <  Right_Black_Point[105]
+//    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])]
+//    && Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
+//    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_two_third(105,Left_Up_Point[1])]
+//    && Right_Black_Point[Emo_two_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
+//    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[105]
+//    && Right_Black_Point[10] < Right_Black_Point[Left_Up_Point[1]] && Right_Black_Point[10] < Right_Black_Point[(Left_Up_Point[1]+10)/2]
+//    && Left_Black_Point[Left_Up_Point[1]] >= Left_Black_Point[Left_Up_Point[1]+1] && Left_Black_Point[Left_Up_Point[1]+1] >= Left_Black_Point[Left_Up_Point[1]+2]
+//    && Left_Black_Point[Left_Up_Point[1]+2] >= Left_Black_Point[Left_Up_Point[1]+3] && Left_Black_Point[Left_Up_Point[1]+3] >= Left_Black_Point[Left_Up_Point[1]+4]
+//    && Left_Black_Point[Left_Up_Point[1]+4] >= Left_Black_Point[Left_Up_Point[1]+5] && Left_Black_Point[Left_Up_Point[1]+5] >= Left_Black_Point[Left_Up_Point[1]+6]
+//    && Left_Black_Point[Left_Up_Point[1]] > Left_Black_Point[Left_Up_Point[1]+5] && Left_Black_Point[Left_Up_Point[1]+1] > Left_Black_Point[Left_Up_Point[1]+6]
+//    && Left_Black_Point[Left_Up_Point[1]] > Left_Black_Point[Left_Up_Point[1]+8] && Left_Black_Point[Left_Up_Point[1]+1] > Left_Black_Point[Left_Up_Point[1]+9]
+//    && Left_Black_Point[Left_Up_Point[1]] > Left_Black_Point[Left_Up_Point[1]+11] && Left_Black_Point[Left_Up_Point[1]+1] > Left_Black_Point[Left_Up_Point[1]+12])
+//    {
+//        for(uint8 y=Left_Up_Point[1] - 3;y>=5;y--)
+//        {
+//            if(circlrsu == 0 && Left_Black_Point[y] >= Left_Black_Point[y-1] && Left_Black_Point[y-1] >= Left_Black_Point[y-2] && Left_Black_Point[y] > Left_Black_Point[y-2] )
+//            {
+//                circlrsu = 1;
+//            }
+//            if(circlrsu == 1)
+//            {
+//                if(Left_Black_Point[y] >= 0 && Left_Black_Point[y-1] <= 10 && Left_Black_Point[y-2] <= 10)
+//                {
+//                    CircleLeft_flag = 1;
+////                    Circlecount = 12;
+//                    //CircleBig = 1;
+//                    circlrsu = 0;
+//                    break;
+//                }
+//            }
+//            if(y == 5)
+//            {
+//                circlrsu = 0;
+//                break;
+//            }
+//        }
+//    }
+
+
+
+
+
+
+
+
+
+
+
+
+左圆环过程：
+if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlcount > 6 && Circlecount == 0)  //上下拐补线
+        {
+            Circlecount = 1;
+        }
+        if(Circlecount == 1)
+        {
+            if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0 && Left_Down_Point[1] > 80)    //下拐消失上拐补线
+            {
+                Circlecount = 2;
+            }
+            else if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlcount <= 3
+                && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+            else if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
+                 && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+        }
+        if(Circlecount == 12)
+        {
+            //EncoderSum_flag = 1;
+            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0)    //下拐出现，等上拐
+            {
+                Circlecount = 3;
+            }
+            else if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
+                 && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+                EncoderSum_flag = 0;
+
+            }
+            else if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlcount <= 3
+                 && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+                EncoderSum_flag = 0;
+
+            }
+            else if(Left_Up_Point_finish_flag == 1 && Left_Up_Point[1] <= 40 && findlcount <= 4 && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+                EncoderSum_flag = 0;
+
+            }
+        }
+        if(Circlecount == 2)
+        {
+            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0)    //下拐出现，等上拐
+            {
+                Circlecount = 3;
+            }
+            else if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
+                 && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+            else if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlcount <= 3
+                 && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+        }
+        if(Circlecount == 3)
+        {
+            if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
+            && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite)        //上拐斜补线进环
+            {
+                Circlecount = 4;
+
+            }
+            else if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlcount <= 3
+                 && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+            else if(Left_Up_Point_finish_flag == 1 && Left_Up_Point[1] <= 40 && findlcount <= 4 && Left_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+        }
+        if(Circlecount == 4)
+        {
+            //Paddingcurve = 1;
+            if(Left_Up_Point[1] < (RY - 10) && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 10] != EmoWhite)
+            {
+                Left_Up_Point[0] = RX;
+                Left_Up_Point[1] = RY;
+            }
+            RX = Left_Up_Point[0];
+            RY = Left_Up_Point[1];
+            if(Left_Up_Point[1] >= 17)
+            {
+                CC = 1;
+            }
+            if(Left_Up_Point_finish_flag == 0)        //下拐消失，上拐斜补线进环
+            {
+                if(Emo_Angle >= 28)                   //拐入成功
+                {
+                    need_cornerL = 0;
+                    Auxiliary_CorneringLeft_flag = 0;
+                    Gyroscope_Star_flag = 0;
+                    Circlecount = 5;
+                    Paddingcurve = 0;
+                    EncoderSum_flag = 0;
+                    CC = 0;
+                }
+                else                                  //拐入失败
+                {
+                    CircleBig = 0;
+                    need_cornerL = 0;
+                    EncoderSum_flag = 0;
+                    Gyroscope_Star_flag = 0;
+                    CircleLeft_flag = 0;
+                    Corners_flag = 0;
+                    Near_Corners_flag = 0;
+                    Circlecount = 0;
+                    PaddingR = 0;
+                    PaddingL = 0;
+                    Paddingcurve = 0;
+                    //Beepindex = 0;
+                    CC = 0;
+                }
+            }
+        }
+        if(Circlecount == 5)
+        {
+            await++;
+            if(await >= 3)
+            {
+                    if(Emo_Angle > 28) //进环点消失，进入弯道，可以补用弯道矢量矩
+                    {
+                        Circlecount = 6;
+                        EncoderSum_flag = 0;
+                        Gyroscope_Star_flag = 0;
+                        await = 0;
+                    }
+                    else
+                    {
+                        need_cornerL = 0;
+                        CircleBig = 0;
+                        EncoderSum_flag = 0;
+                        Gyroscope_Star_flag = 0;
+                        CircleLeft_flag = 0;
+                        Corners_flag = 0;
+                        Near_Corners_flag = 0;
+                        Circlecount = 0;
+                        //Beepindex = 0;
+                        PaddingR = 0;
+                        PaddingL = 0;
+                        await = 0;
+                    }
+
+            }
+
+        }
+        if(Circlecount == 6)
+        {
+            //CircleInTrial();
+            if(Right_Down_Point_finish_flag == 1 || Left_Up_Point_finish_flag == 1)       //右拐出现，进行右拐斜补线出环
+            {
+                Circlecount = 7;
+            }
+        }
+        if(Circlecount == 7)
+        {
+            Paddingcurve = 1;
+            CircleOutPoint();
+            Gyroscope_Star_flag = 1;
+            EncoderSum_flag = 1;
+
+            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0 && Right_Down_Point_finish_flag == 0
+                 && Emo_Angle > 38)      //出口出而下拐出现上拐无&& Real_Distance >= 3800
+            {
+                //Auxiliary_CorneringLeft_flag = 0;
+                //need_cornerL =  0;
+                Paddingcurve = 0;
+                Gyroscope_Star_flag = 0;
+                EncoderSum_flag = 0;
+                Circlecount = 8;
+            }
+            else if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0
+                     && Emo_Angle > 38)  //出口出上下拐都有&& Real_Distance >= 3800
+            {
+                //Auxiliary_CorneringLeft_flag = 0;
+                //need_cornerL = 0;
+                Paddingcurve = 0;
+                Gyroscope_Star_flag = 0;
+                EncoderSum_flag = 0;
+                Circlecount = 9;
+
+            }
+            else if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0
+                     && Emo_Angle > 38)  //下拐单补&& Real_Distance >= 3800
+            {
+                //Auxiliary_CorneringLeft_flag = 0;
+                //need_cornerL = 0;
+                Paddingcurve = 0;
+                Gyroscope_Star_flag = 0;
+                EncoderSum_flag = 0;
+
+                Circlecount = 10;
+            }
+        }
+        if(Circlecount == 8)
+        {
+
+            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 1)       //上下拐不补线只记录
+            {
+                Circlecount = 9;
+            }
+            else if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1)  //上拐单补
+            {
+                Circlecount = 10;
+            }
+        }
+        if(Circlecount == 9)
+        {
+            Circlecount = 10;
+
+            if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1)       //上拐单补
+            {
+                Circlecount = 10;
+            }
+        }
+        if(Circlecount == 10)                                                            //圆环结束
+        {
+            EncoderSum_flag = 1;
+            if(Left_Up_Point[1] >= 63 || (Real_Distance >= 4000 && CircleBig == 0) || (Real_Distance >= 5000 && CircleBig == 1))
+            {
+                Circlecount = 11;
+                EncoderSum_flag = 0;
+
+            }
+        }
+        
+        
+        
+        
+        
+        
+        else if(CircleRight_flag == 1)
+    {
+        //Beepindex = BeepCircle;
+        if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 1 && findrcount > 6 && Circlecount == 0)  //上下拐补线
+        {
+            Circlecount = 1;
+        }
+        if(Circlecount == 1)
+        {
+            if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0 && Right_Down_Point[1] > 80)   //下拐消失上拐补线
+            {
+                Circlecount = 2;
+            }
+            else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1
+                && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && findrcount <= 3 && Right_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+            if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1
+            && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && findrcount <= 3 && Right_Up_Point[1] > 15)        //上拐斜补线进环
+            {
+                Circlecount = 4;
+            }
+        }
+//        if(Circlecount == 12)
+//        {
+//            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)    //下拐出现，等上拐
+//            {
+//                Circlecount = 3;
+//            }
+//            else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1
+//                && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && Right_Up_Point[1] > 15)
+//            {
+//                Circlecount = 4;
+//                EncoderSum_flag = 0;
+//
+//            }
+//            else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1
+//                && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && findrcount <= 3 && Right_Up_Point[1] > 15)
+//            {
+//                Circlecount = 4;
+//                EncoderSum_flag = 0;
+//
+//
+//            }
+//            else if(Right_Up_Point_finish_flag == 1 && Right_Up_Point[1] < 40 && findrcount <= 4 && Right_Up_Point[1] > 15)
+//           {
+//               Circlecount = 4;
+//               EncoderSum_flag = 0;
+//
+//           }
+//        }
+        if(Circlecount == 2)
+        {
+            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)    //下拐出现，等上拐
+            {
+                Circlecount = 3;
+            }
+            else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1
+                && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && Right_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+            else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1
+                && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && findrcount <= 3 && Right_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+
+            }
+        }
+        if(Circlecount == 3)
+        {
+            if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1
+            && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite)        //上拐斜补线进环
+            {
+                Circlecount = 4;
+
+            }
+            else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1
+                && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && findrcount <= 3 && Right_Up_Point[1] > 15)
+            {
+                Circlecount = 4;
+
+            }
+            else if(Right_Up_Point_finish_flag == 1 && Right_Up_Point[1] < 40 && findrcount <= 4 && Right_Up_Point[1] > 15)
+           {
+               Circlecount = 4;
+           }
+        }
+        if(Circlecount == 4)
+        {
+            Gyroscope_Star_flag = 1;
+            EncoderSum_flag = 1;
+            if(Right_Up_Point[1] < (RY - 10) && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 10] == EmoWhite)
+            {
+                Right_Up_Point[0] = RX;
+                Right_Up_Point[1] = RY;
+                //Right_Up_Point_finish_flag = 0;
+            }
+            RX = Right_Up_Point[0];
+            RY = Right_Up_Point[1];
+            if(Right_Up_Point_finish_flag == 0 && Real_Distance >= 4500)        //下拐消失，上拐斜补线进环
+            {
+                if(Emo_Angle <= -28)        //拐入成功
+                {
+                    need_cornerR = 0;
+                    Auxiliary_CorneringRight_flag = 0;
+                    Gyroscope_Star_flag = 0;
+                    Circlecount = 5;
+                    EncoderSum_flag = 0;
+                    Paddingcurve = 0;
+                }
+                else                     //拐入失败
+                {
+                    CircleBig = 0;
+                    need_cornerR = 0;
+                    Gyroscope_Star_flag = 0;
+                    EncoderSum_flag = 0;
+                    CircleRight_flag = 0;
+                    Corners_flag = 0;
+                    Near_Corners_flag = 0;
+                    Paddingcurve = 0;
+                    Circlecount = 0;
+                    PaddingR = 0;
+                    PaddingL = 0;
+                    //Beepindex = 0;
+                }
+            }
+        }
+        if(Circlecount == 5)
+        {
+            await++;
+            if(await >= 3)
+            {
+                Gyroscope_Star_flag = 1;
+                EncoderSum_flag = 1;
+                if(Emo_Angle < -28)
+                {
+                    Circlecount = 6;
+                    Gyroscope_Star_flag = 0;
+                    EncoderSum_flag = 0;
+                    await = 0;
+                }
+               }
+            }
+        if(Circlecount == 6)
+        {
+            //CircleInTrial();
+            if(Left_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)                  //左拐出现，进行左拐斜补线出环
+            {
+                Circlecount = 7;
+            }
+        }
+        if(Circlecount == 7)
+        {
+            Paddingcurve = 1;
+            CircleOutPoint();
+            Gyroscope_Star_flag = 1;
+            EncoderSum_flag = 1;
+            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0 && Left_Down_Point_finish_flag == 0
+                 && Real_Distance >= 3800  && Emo_Angle <-38)   //出口出而下拐出现上拐无
+            {
+                //Auxiliary_CorneringRight_flag = 0;
+                //need_cornerR = 0;
+                Paddingcurve = 0;
+                Gyroscope_Star_flag = 0;
+                EncoderSum_flag = 0;
+                Circlecount = 8;
+            }
+            else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0
+                    && Real_Distance >= 3800 && Emo_Angle <-38)  //出口出上下拐都有
+            {
+                //Auxiliary_CorneringRight_flag = 0;
+                //need_cornerR = 0;
+                Paddingcurve = 0;
+                Gyroscope_Star_flag = 0;
+                EncoderSum_flag = 0;
+                Circlecount = 9;
+            }
+            else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0
+                    && Real_Distance >= 3800 && Emo_Angle <-38)  //下拐单补
+            {
+                //Auxiliary_CorneringRight_flag = 0;
+                //need_cornerR = 0;
+                Paddingcurve = 0;
+                Gyroscope_Star_flag = 0;
+                EncoderSum_flag = 0;
+
+                Circlecount = 10;
+            }
+        }
+        if(Circlecount == 8)
+        {
+
+            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1)
+            {
+                Circlecount = 9;
+            }
+            else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1)  //上拐单补
+            {
+                Circlecount = 10;
+            }
+        }
+        if(Circlecount == 9)
+        {
+            Circlecount = 10;
+
+            if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1)  //上拐单补
+            {
+                Circlecount = 10;
+            }
+        }
+        if(Circlecount == 10)
+        {
+            EncoderSum_flag = 1;
+            if(Right_Up_Point[1] >= 60 || (Real_Distance >= 3500 && CircleBig == 0) || (Real_Distance >= 4500 && CircleBig == 1))     //圆环结束
+            {
+                Circlecount = 11;
+                EncoderSum_flag = 0;
+
+            }
+        }
+        switch(Circlecount)
+        {
+            case 1 :
+                Link_Right_One_Point[0] = Right_Down_Point[0];
+                Link_Right_One_Point[1] = Right_Down_Point[1];
+                Link_Right_Two_Point[0] = Right_Up_Point[0];
+                Link_Right_Two_Point[1] = Right_Up_Point[1];
+                PaddingR = 1;
+                PaddingL = 0;
+                break;
+            case 2 :
+                Link_Right_One_Point[0] = Right_Down_Point[0];
+                Link_Right_One_Point[1] = Right_Down_Point[1];
+                Link_Right_Two_Point[0] = Right_Up_Point[0];
+                Link_Right_Two_Point[1] = Right_Up_Point[1];
+                PaddingR = 1;
+                PaddingL = 0;
+                break;
+            case 3 :
+                Link_Right_One_Point[0] = 0;
+                Link_Right_One_Point[1] = 0;
+                Link_Right_Two_Point[0] = 0;
+                Link_Right_Two_Point[1] = 0;
+                PaddingR = 1;
+                PaddingL = 0;
+                break;
+            case 4 :
+                Link_Left_One_Point[0] = Right_Up_Point[0];
+                Link_Left_One_Point[1] = Right_Up_Point[1];
+                if(Right_Up_Point[1]*2 + 40 > 112)
+                {
+                    ReplacePoint = 112;
+                }
+                else
+                {
+                    ReplacePoint = Right_Up_Point[1]*2 + 40;
+                }
+                Link_Left_Two_Point[0] = Left_Black_Point[ReplacePoint];
+                Link_Left_Two_Point[1] = ReplacePoint;
+                Corners_flag = 1;
+//                if((Right_Black_Point[100] == 187 && Right_Black_Point[99] == 187 && Right_Black_Point[98] == 187
+//                    && Left_Black_Point[100] != 0 && Left_Black_Point[99] != 0 && Left_Black_Point[98] != 0
+//                    && Left_Black_Point[95] != 0 && Left_Black_Point[94] != 187 && Left_Black_Point[93] != 187)
+//                 || (Left_Black_Point[100] == 0 && Left_Black_Point[99] == 0 && Left_Black_Point[98] == 0
+//                    && Right_Black_Point[100] != 187 && Right_Black_Point[99] != 187 && Right_Black_Point[98] != 187
+//                    && Right_Black_Point[95] != 187 && Right_Black_Point[94] != 187 && Right_Black_Point[93] != 187))
+//                {
+//                    Near_Corners_flag = 1;
+//                }
+//                else
+//                {
+//                    Near_Corners_flag = 0;
+//                }
+                if(Left_Black_Point[Right_Up_Point[1]] > Right_Up_Point[0] && Left_Black_Point[62] != 0 && Right_Up_Point[1] >= 30)
+                {
+                    Paddingcurve = 0;
+                    PaddingR = 0;
+                    PaddingL = 0;
+                }
+                else
+                {
+                    Paddingcurve = 1;
+                    PaddingR = 0;
+                    PaddingL = 1;
+                }
+                break;
+            case 5 :
+                PaddingR = 0;
+                PaddingL = 0;
+                break;
+            case 6 :
+                PaddingR = 0;
+                PaddingL = 0;
+                break;
+            case 7 :
+                Link_Left_One_Point[0] = CircleOut_Point[0];
+                Link_Left_One_Point[1] = CircleOut_Point[1];
+                Link_Left_Two_Point[0] = Left_Down_Point[0];
+                Link_Left_Two_Point[1] = Left_Down_Point[1];
+                PaddingR = 0;
+                PaddingL = 1;
+                break;
+            case 8 :
+                Link_Right_One_Point[0] = 187;
+                Link_Right_One_Point[1] = 0;
+                Link_Right_Two_Point[0] = Right_Down_Point[0];
+                Link_Right_Two_Point[1] = Right_Down_Point[1];
+                PaddingR = 1;
+                PaddingL = 0;
+                break;
+            case 9 :
+                Link_Right_One_Point[0] = Right_Down_Point[0];
+                Link_Right_One_Point[1] = Right_Down_Point[1];
+                Link_Right_Two_Point[0] = Right_Up_Point[0];
+                Link_Right_Two_Point[1] = Right_Up_Point[1];
+                PaddingR = 1;
+                PaddingL = 0;
+                break;
+            case 10 :
+                Link_Right_One_Point[0] = 187;
+                Link_Right_One_Point[1] = 119;
+                Link_Right_Two_Point[0] = Right_Up_Point[0];
+                Link_Right_Two_Point[1] = Right_Up_Point[1];
+                PaddingR = 1;
+                PaddingL = 0;
+                break;
+            case 11 :
+                CircleRight_flag = 0;
+                Corners_flag = 0;
+                CircleBig = 0;
+                //Near_Corners_flag = 0;
+                Circlecount = 0;
+                PaddingR = 0;
+                PaddingL = 0;
+                //Beepindex = 0;
+                Circle_RC++;
+                break;
+            case 12 :
+                Link_Right_One_Point[0] = 187;
+                Link_Right_One_Point[1] = 119;
+                Link_Right_Two_Point[0] = Right_Up_Point[0];
+                Link_Right_Two_Point[1] = Right_Up_Point[1];
+                PaddingR = 1;
+                PaddingL = 0;
+                break;
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+偏差：
+void Calculate_Offset_1()
+{
+      offset =0;
+      for(uint8 y =MT9V03X_H -1; y >=10; y--)    //利用近大远小的权重计算偏差(调试完成)
+      {
+          m_line_x[y] =1.0*(l_line_x[y] +r_line_x[y])/2;    //这句代码并不是没有用,千万不可以删
+      }
+
+      HDPJ_lvbo(m_line_x, 20, MT9V03X_H -1);   //平均滑动滤波
+
+      for(uint8 y =MT9V03X_H -30; y >=MT9V03X_H -40; y--)    //利用近大远小的权重计算偏差(调试完成)
+      {
+          offset +=offset_quanzhong[MT9V03X_H-30 -y] *(m_line_x[y] -MT9V03X_W/2);
+      }
+      offset =offset/2;
+
+      if((road_type.Barn_r_in == 1) && (pass_barn == 2))
+      {
+          offset = 200;
+      }
+      if((road_type.Barn_l_in == 1) && (pass_barn == 2))
+      {
+          offset = -200;
+      }
+}
+
+
+平滑：
+int16 Sum1;
+void HDPJ_lvbo(uint8 data[], uint8 N, uint8 size)
+{
+    Sum1 = 0;
+    for(uint8 j =0; j <size; j++)
+    {
+        if(j <N /2)
+        {
+            for(uint8 k =0; k <N; k++)
+            {
+                Sum1 +=data[j +k];
+            }
+            data[j] =Sum1 /N;
+        }
+        else
+            if(j <size -N /2)
+            {
+                for(uint8 k =0; k <N /2; k++)
+                {
+                    Sum1 +=(data[j +k] +data[j -k]);
+                }
+                data[j] = Sum1 /N;
+            }
+            else
+            {
+                for(uint8 k =0; k <size -j; k++)
+                {
+                    Sum1 +=data[j +k];
+                }
+                for(uint8 k =0; k <(N -size +j); k++)
+                {
+                    Sum1 +=data[j -k];
+                }
+                data[j] = Sum1 /N;
+            }
+        Sum1 = 0;
+    }
+}
