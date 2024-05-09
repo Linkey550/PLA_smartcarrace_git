@@ -100,9 +100,9 @@ int main (void)
 
     encoder_quad_init(ENCODER_QUADDEC, ENCODER_QUADDEC_A, ENCODER_QUADDEC_B);   // 初始化编码器模块与引脚 正交解码编码器模式
 
-    PID_Init(&camera_pid, 18, 0, 0, 50, 250);                                   //初始化外环pid
-    PID_Init(&angv_pid,9, 0, 0, 50, 1200);                                     //初始化内环pid
-    PID_Init(&speed_pid, 10000, 0, 0, 50, 4300);                                    //初始化速度环pid
+    PID_Init(&camera_pid, 23, 0, 12, 300, 250);                                   //初始化外环pid
+    PID_Init(&angv_pid,11, 0, 1, 50, 1200);                                     //初始化内环pid
+    PID_Init(&speed_pid, 10000, 0, 2, 300, 4300);                                    //初始化速度环pid
 
     pit_ms_init(PIT_CH, 100);                                                   // 初始化 PIT_CH0 为周期中断 100ms 周期
     interrupt_set_priority(PIT_PRIORITY, 0);                                    // 设置 PIT1 对周期中断的中断优先级为 0
@@ -150,8 +150,8 @@ void pit_handler (void)
     //速度环
     if(pid_switch==1)
     {
-//        encoder_point=0.61-(0.2*abs(angv[2]/350));                                    //目标速度计算
-        encoder_point=0.7;                                    //目标速度计算
+        encoder_point=1-(0.6*abs(angv[2]/250));                                    //目标速度计算
+//        encoder_point=0.7;                                    //目标速度计算
         PID_Realize(&speed_pid,encoder_data_quaddec_v,encoder_point);               //速度环pid
         PID_DirveUse(&angv_pid,&speed_pid);//赋值到电机
     }
@@ -161,7 +161,7 @@ void pit_handler (void)
     if(camera_p.Garage_In_flag==1)
       {
           pit_time++;//计时
-          if(pit_time>= 40)
+          if(pit_time>= 30)
           {//计时
           pid_switch=0;
           PWM[0]=0;
