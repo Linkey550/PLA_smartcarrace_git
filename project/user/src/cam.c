@@ -2125,14 +2125,12 @@ void Circle_supplement(void)
     {
         CircleLeft_flag = 1;
     }
-
   else if(dieReady == 2 && CornerLeft_flag == 0 && CornerRight_flag == 0 && Corners_flag == 0  
   && Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Right_Up_Point[1] >= 25 && Right_Up_Point[1] <= 66 && Right_Up_Point[0] < 165 && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 0
   && WindupL_flag == 0 && WindupR_flag == 0
   && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
   && camera_p.Garage_In_flag == 0 && Cross_flag == 0 && Trifork_flag == 0
-  && CornerS_flag == 0
-  && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[(Right_Up_Point[1]+105)/2]
+  && CornerS_flag == 0 && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[(Right_Up_Point[1]+105)/2]
   && Left_Black_Point[(Right_Up_Point[1]+105)/2] >  Left_Black_Point[105]
   && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[Emo_one_third(105,Right_Up_Point[1])]
   && Left_Black_Point[Emo_one_third(105,Right_Up_Point[1])] >  Left_Black_Point[105]

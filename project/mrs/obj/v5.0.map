@@ -5947,7 +5947,7 @@ OUTPUT(v5.0.elf elf32-littleriscv)
  .debug_ranges  0x00000000000011c0       0xf0 ./sdk/Peripheral/ch32v30x_usart.o
  .debug_ranges  0x00000000000012b0       0x40 ./sdk/Peripheral/ch32v30x_usbotg_device.o
 
-.debug_line     0x0000000000000000    0x25fd6
+.debug_line     0x0000000000000000    0x25ff2
  .debug_line    0x0000000000000000      0x44c ./zf_driver/zf_driver_delay.o
  .debug_line    0x000000000000044c      0x49d ./zf_driver/zf_driver_dvp.o
  .debug_line    0x00000000000008e9      0xaa5 ./zf_driver/zf_driver_encoder.o
@@ -5976,18 +5976,18 @@ OUTPUT(v5.0.elf elf32-littleriscv)
  .debug_line    0x0000000000010a87      0x6aa ./user_c/Encoder_c.o
  .debug_line    0x0000000000011131      0x67b ./user_c/Gyroscope_c.o
  .debug_line    0x00000000000117ac      0xd95 ./user_c/PID.o
- .debug_line    0x0000000000012541     0xa3c2 ./user_c/cam.o
- .debug_line    0x000000000001c903      0xe21 ./user_c/isr.o
- .debug_line    0x000000000001d724      0xff5 ./user_c/main.o
- .debug_line    0x000000000001e719      0x641 ./user_c/yj901s.o
- .debug_line    0x000000000001ed5a      0x38d ./sdk/Startup/startup_ch32v30x_D8C.o
- .debug_line    0x000000000001f0e7      0x542 ./sdk/Peripheral/ch32v30x_exti.o
- .debug_line    0x000000000001f629      0xa63 ./sdk/Peripheral/ch32v30x_gpio.o
- .debug_line    0x000000000002008c     0x1272 ./sdk/Peripheral/ch32v30x_rcc.o
- .debug_line    0x00000000000212fe      0xa59 ./sdk/Peripheral/ch32v30x_spi.o
- .debug_line    0x0000000000021d57     0x220e ./sdk/Peripheral/ch32v30x_tim.o
- .debug_line    0x0000000000023f65      0xc97 ./sdk/Peripheral/ch32v30x_usart.o
- .debug_line    0x0000000000024bfc     0x13da ./sdk/Peripheral/ch32v30x_usbotg_device.o
+ .debug_line    0x0000000000012541     0xa3de ./user_c/cam.o
+ .debug_line    0x000000000001c91f      0xe21 ./user_c/isr.o
+ .debug_line    0x000000000001d740      0xff5 ./user_c/main.o
+ .debug_line    0x000000000001e735      0x641 ./user_c/yj901s.o
+ .debug_line    0x000000000001ed76      0x38d ./sdk/Startup/startup_ch32v30x_D8C.o
+ .debug_line    0x000000000001f103      0x542 ./sdk/Peripheral/ch32v30x_exti.o
+ .debug_line    0x000000000001f645      0xa63 ./sdk/Peripheral/ch32v30x_gpio.o
+ .debug_line    0x00000000000200a8     0x1272 ./sdk/Peripheral/ch32v30x_rcc.o
+ .debug_line    0x000000000002131a      0xa59 ./sdk/Peripheral/ch32v30x_spi.o
+ .debug_line    0x0000000000021d73     0x220e ./sdk/Peripheral/ch32v30x_tim.o
+ .debug_line    0x0000000000023f81      0xc97 ./sdk/Peripheral/ch32v30x_usart.o
+ .debug_line    0x0000000000024c18     0x13da ./sdk/Peripheral/ch32v30x_usbotg_device.o
 
 .debug_str      0x0000000000000000     0x8ff1
  .debug_str     0x0000000000000000      0x5ac ./zf_driver/zf_driver_delay.o
