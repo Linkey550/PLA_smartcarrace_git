@@ -5,6 +5,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+<<<<<<< HEAD
 F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_adc.c \
 F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_delay.c \
 F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_dvp.c \
@@ -21,6 +22,24 @@ F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_
 F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_timer.c \
 F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_uart.c \
 F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_usb_cdc.c 
+=======
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_adc.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_delay.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_dvp.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_encoder.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_exti.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_flash.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_gpio.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_iic.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_pit.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_pwm.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_soft_iic.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_soft_spi.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_spi.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_timer.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_uart.c \
+E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_usb_cdc.c 
+>>>>>>> main
 
 OBJS += \
 ./zf_driver/zf_driver_adc.o \
@@ -60,6 +79,7 @@ C_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
+<<<<<<< HEAD
 zf_driver/zf_driver_adc.o: F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_adc.c
 	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\Libraries\doc" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\zf_components" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Core" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Ld" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Startup" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\project\user\inc" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\zf_common" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\zf_device" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\project\code" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
 	@	@
@@ -107,5 +127,54 @@ zf_driver/zf_driver_uart.o: F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/li
 	@	@
 zf_driver/zf_driver_usb_cdc.o: F:/·É¿¨ÖÇÄÜÊÓ¾õ/git_smartcar/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_usb_cdc.c
 	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\Libraries\doc" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\zf_components" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Core" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Ld" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Startup" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\project\user\inc" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\zf_common" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\zf_device" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\project\code" -I"F:\·É¿¨ÖÇÄÜÊÓ¾õ\git_smartcar\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+=======
+zf_driver/zf_driver_adc.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_adc.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_delay.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_delay.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_dvp.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_dvp.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_encoder.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_encoder.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_exti.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_exti.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_flash.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_flash.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_gpio.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_gpio.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_iic.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_iic.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_pit.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_pit.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_pwm.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_pwm.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_soft_iic.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_soft_iic.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_soft_spi.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_soft_spi.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_spi.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_spi.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_timer.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_timer.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_uart.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_uart.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+	@	@
+zf_driver/zf_driver_usb_cdc.o: E:/PLA_smartcarrace_git/libraries/zf_driver/zf_driver_usb_cdc.c
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -I"E:\PLA_smartcarrace_git\Libraries\doc" -I"E:\PLA_smartcarrace_git\libraries\zf_components" -I"E:\PLA_smartcarrace_git\libraries\sdk\Core" -I"E:\PLA_smartcarrace_git\libraries\sdk\Ld" -I"E:\PLA_smartcarrace_git\libraries\sdk\Peripheral" -I"E:\PLA_smartcarrace_git\libraries\sdk\Startup" -I"E:\PLA_smartcarrace_git\project\user\inc" -I"E:\PLA_smartcarrace_git\libraries\zf_common" -I"E:\PLA_smartcarrace_git\libraries\zf_device" -I"E:\PLA_smartcarrace_git\project\code" -I"E:\PLA_smartcarrace_git\libraries\zf_driver" -std=gnu11 -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -c -o "$@" "$<"
+>>>>>>> main
 	@	@
 

@@ -42,34 +42,39 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 SECONDARY_FLASH += \
-v5.0.hex \
+PLA_smartcarrace_git.hex \
 
 SECONDARY_LIST += \
-v5.0.lst \
+PLA_smartcarrace_git.lst \
 
 SECONDARY_SIZE += \
-v5.0.siz \
+PLA_smartcarrace_git.siz \
 
 
 # 所有目标
-all: v5.0.elf secondary-outputs
+all: PLA_smartcarrace_git.elf secondary-outputs
 
 # 工具调用
+<<<<<<< HEAD
 v5.0.elf: $(OBJS) $(USER_OBJS)
 	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -T "F:\飞卡智能视觉\git_smartcar\PLA_smartcarrace_git\libraries\sdk\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -L"../" -L"F:\飞卡智能视觉\git_smartcar\PLA_smartcarrace_git\libraries\zf_device" -Wl,-Map,"v5.0.map" --specs=nano.specs -u _printf_float --specs=nosys.specs -Wl,--print-memory-usage -o "v5.0.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+=======
+PLA_smartcarrace_git.elf: $(OBJS) $(USER_OBJS)
+	@	@	riscv-none-embed-gcc -march=rv32imafc -mabi=ilp32f -msmall-data-limit=8 -mno-save-restore -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections -fno-common -pedantic -Wunused -Wuninitialized -Wall  -g -T "E:\PLA_smartcarrace_git\libraries\sdk\Ld\Link.ld" -nostartfiles -Xlinker --gc-sections -L"../" -L"E:\PLA_smartcarrace_git\libraries\zf_device" -Wl,-Map,"PLA_smartcarrace_git.map" --specs=nano.specs -u _printf_float --specs=nosys.specs -Wl,--print-memory-usage -o "PLA_smartcarrace_git.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+>>>>>>> main
 	@	@
-v5.0.hex: v5.0.elf
-	@	riscv-none-embed-objcopy -O ihex "v5.0.elf"  "v5.0.hex"
+PLA_smartcarrace_git.hex: PLA_smartcarrace_git.elf
+	@	riscv-none-embed-objcopy -O ihex "PLA_smartcarrace_git.elf"  "PLA_smartcarrace_git.hex"
 	@	@
-v5.0.lst: v5.0.elf
-	@	riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "v5.0.elf" > "v5.0.lst"
+PLA_smartcarrace_git.lst: PLA_smartcarrace_git.elf
+	@	riscv-none-embed-objdump --source --all-headers --demangle --line-numbers --wide "PLA_smartcarrace_git.elf" > "PLA_smartcarrace_git.lst"
 	@	@
-v5.0.siz: v5.0.elf
-	@	riscv-none-embed-size --format=berkeley "v5.0.elf"
+PLA_smartcarrace_git.siz: PLA_smartcarrace_git.elf
+	@	riscv-none-embed-size --format=berkeley "PLA_smartcarrace_git.elf"
 	@	@
 # 其他目标
 clean:
-	-$(RM) $(ASM_UPPER_DEPS)$(OBJS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS) v5.0.elf
+	-$(RM) $(ASM_UPPER_DEPS)$(OBJS)$(SECONDARY_FLASH)$(SECONDARY_LIST)$(SECONDARY_SIZE)$(ASM_DEPS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS) PLA_smartcarrace_git.elf
 	-@
 secondary-outputs: $(SECONDARY_FLASH) $(SECONDARY_LIST) $(SECONDARY_SIZE)
 
