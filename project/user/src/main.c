@@ -10,7 +10,7 @@
 
 #define WIFI_SSID_TEST          "ppFFS"
 #define WIFI_PASSWORD_TEST      "lhr040210" // 如果需要连接的WIFI 没有密码则需要将 这里 替换为 NULL
-//test
+//tests
 
 #define FLASH_SECTION_INDEX       (63)                                          // 存储数据用的扇区 倒数第一个扇区
 #define FLASH_PAGE_INDEX          (3)                                           // 存储数据用的页码 倒数第一个页码
