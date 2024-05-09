@@ -1,8 +1,8 @@
-½¨ÒéÓÃ»§ĞèÒªÌí¼Ó×Ô¼ºµÄ´úÂëÎÄ¼şµÄÊ±ºò£¬½«ÎÄ¼ş´æ·ÅÔÚCODEÎÄ¼ş¼ĞÏÂ
-²»ÒªÔÙ´´½¨×ÓÎÄ¼ş¼Ğ£¬Ö±½Ó½«´úÂëÎÄ¼ş·ÅÔÚCODEÎÄ¼ş¼ĞÀïÃæ¾ÍĞĞ
-È»ºó¹¤³ÌÀïÃæÌí¼ÓÎÄ¼ş¼´¿É±àÒë
-Ô²»·£º
-ÅĞ¶ÏÌõ¼ş£¨&& Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
+å»ºè®®ç”¨æˆ·éœ€è¦æ·»åŠ è‡ªå·±çš„ä»£ç æ–‡ä»¶çš„æ—¶å€™ï¼Œå°†æ–‡ä»¶å­˜æ”¾åœ¨CODEæ–‡ä»¶å¤¹ä¸‹
+ä¸è¦å†åˆ›å»ºå­æ–‡ä»¶å¤¹ï¼Œç›´æ¥å°†ä»£ç æ–‡ä»¶æ”¾åœ¨CODEæ–‡ä»¶å¤¹é‡Œé¢å°±è¡Œ
+ç„¶åå·¥ç¨‹é‡Œé¢æ·»åŠ æ–‡ä»¶å³å¯ç¼–è¯‘
+åœ†ç¯ï¼š
+åˆ¤æ–­æ¡ä»¶ï¼ˆ&& Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
     && Right_Black_Point[(Left_Up_Point[1]+105)/2] <  Right_Black_Point[105]
     && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])]
     && Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
@@ -11,7 +11,7 @@
     && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[105]
     && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 10] == EmoWhite
     && Emo_imag[Left_Up_Point[1] - 1][Left_Up_Point[0] - 10] == EmoWhite
-    && Left_Black_Point[112] == 0 && Left_Black_Point[113] == 0 && Left_Black_Point[115] == 0£©
+    && Left_Black_Point[112] == 0 && Left_Black_Point[113] == 0 && Left_Black_Point[115] == 0ï¼‰
     
     
     
@@ -119,14 +119,14 @@
 
 
 
-×óÔ²»·¹ı³Ì£º
-if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlcount > 6 && Circlecount == 0)  //ÉÏÏÂ¹Õ²¹Ïß
+å·¦åœ†ç¯è¿‡ç¨‹ï¼š
+if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlcount > 6 && Circlecount == 0)  //ä¸Šä¸‹æ‹è¡¥çº¿
         {
             Circlecount = 1;
         }
         if(Circlecount == 1)
         {
-            if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0 && Left_Down_Point[1] > 80)    //ÏÂ¹ÕÏûÊ§ÉÏ¹Õ²¹Ïß
+            if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0 && Left_Down_Point[1] > 80)    //ä¸‹æ‹æ¶ˆå¤±ä¸Šæ‹è¡¥çº¿
             {
                 Circlecount = 2;
             }
@@ -146,7 +146,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         if(Circlecount == 12)
         {
             //EncoderSum_flag = 1;
-            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0)    //ÏÂ¹Õ³öÏÖ£¬µÈÉÏ¹Õ
+            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0)    //ä¸‹æ‹å‡ºç°ï¼Œç­‰ä¸Šæ‹
             {
                 Circlecount = 3;
             }
@@ -173,7 +173,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         }
         if(Circlecount == 2)
         {
-            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0)    //ÏÂ¹Õ³öÏÖ£¬µÈÉÏ¹Õ
+            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0)    //ä¸‹æ‹å‡ºç°ï¼Œç­‰ä¸Šæ‹
             {
                 Circlecount = 3;
             }
@@ -193,7 +193,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         if(Circlecount == 3)
         {
             if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
-            && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite)        //ÉÏ¹ÕĞ±²¹Ïß½ø»·
+            && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 5] == EmoWhite)        //ä¸Šæ‹æ–œè¡¥çº¿è¿›ç¯
             {
                 Circlecount = 4;
 
@@ -224,9 +224,9 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
             {
                 CC = 1;
             }
-            if(Left_Up_Point_finish_flag == 0)        //ÏÂ¹ÕÏûÊ§£¬ÉÏ¹ÕĞ±²¹Ïß½ø»·
+            if(Left_Up_Point_finish_flag == 0)        //ä¸‹æ‹æ¶ˆå¤±ï¼Œä¸Šæ‹æ–œè¡¥çº¿è¿›ç¯
             {
-                if(Emo_Angle >= 28)                   //¹ÕÈë³É¹¦
+                if(Emo_Angle >= 28)                   //æ‹å…¥æˆåŠŸ
                 {
                     need_cornerL = 0;
                     Auxiliary_CorneringLeft_flag = 0;
@@ -236,7 +236,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
                     EncoderSum_flag = 0;
                     CC = 0;
                 }
-                else                                  //¹ÕÈëÊ§°Ü
+                else                                  //æ‹å…¥å¤±è´¥
                 {
                     CircleBig = 0;
                     need_cornerL = 0;
@@ -259,7 +259,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
             await++;
             if(await >= 3)
             {
-                    if(Emo_Angle > 28) //½ø»·µãÏûÊ§£¬½øÈëÍäµÀ£¬¿ÉÒÔ²¹ÓÃÍäµÀÊ¸Á¿¾Ø
+                    if(Emo_Angle > 28) //è¿›ç¯ç‚¹æ¶ˆå¤±ï¼Œè¿›å…¥å¼¯é“ï¼Œå¯ä»¥è¡¥ç”¨å¼¯é“çŸ¢é‡çŸ©
                     {
                         Circlecount = 6;
                         EncoderSum_flag = 0;
@@ -288,7 +288,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         if(Circlecount == 6)
         {
             //CircleInTrial();
-            if(Right_Down_Point_finish_flag == 1 || Left_Up_Point_finish_flag == 1)       //ÓÒ¹Õ³öÏÖ£¬½øĞĞÓÒ¹ÕĞ±²¹Ïß³ö»·
+            if(Right_Down_Point_finish_flag == 1 || Left_Up_Point_finish_flag == 1)       //å³æ‹å‡ºç°ï¼Œè¿›è¡Œå³æ‹æ–œè¡¥çº¿å‡ºç¯
             {
                 Circlecount = 7;
             }
@@ -301,7 +301,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
             EncoderSum_flag = 1;
 
             if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0 && Right_Down_Point_finish_flag == 0
-                 && Emo_Angle > 38)      //³ö¿Ú³ö¶øÏÂ¹Õ³öÏÖÉÏ¹ÕÎŞ&& Real_Distance >= 3800
+                 && Emo_Angle > 38)      //å‡ºå£å‡ºè€Œä¸‹æ‹å‡ºç°ä¸Šæ‹æ— && Real_Distance >= 3800
             {
                 //Auxiliary_CorneringLeft_flag = 0;
                 //need_cornerL =  0;
@@ -311,7 +311,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
                 Circlecount = 8;
             }
             else if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0
-                     && Emo_Angle > 38)  //³ö¿Ú³öÉÏÏÂ¹Õ¶¼ÓĞ&& Real_Distance >= 3800
+                     && Emo_Angle > 38)  //å‡ºå£å‡ºä¸Šä¸‹æ‹éƒ½æœ‰&& Real_Distance >= 3800
             {
                 //Auxiliary_CorneringLeft_flag = 0;
                 //need_cornerL = 0;
@@ -322,7 +322,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
 
             }
             else if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0
-                     && Emo_Angle > 38)  //ÏÂ¹Õµ¥²¹&& Real_Distance >= 3800
+                     && Emo_Angle > 38)  //ä¸‹æ‹å•è¡¥&& Real_Distance >= 3800
             {
                 //Auxiliary_CorneringLeft_flag = 0;
                 //need_cornerL = 0;
@@ -336,11 +336,11 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         if(Circlecount == 8)
         {
 
-            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 1)       //ÉÏÏÂ¹Õ²»²¹ÏßÖ»¼ÇÂ¼
+            if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 1)       //ä¸Šä¸‹æ‹ä¸è¡¥çº¿åªè®°å½•
             {
                 Circlecount = 9;
             }
-            else if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1)  //ÉÏ¹Õµ¥²¹
+            else if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1)  //ä¸Šæ‹å•è¡¥
             {
                 Circlecount = 10;
             }
@@ -349,12 +349,12 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         {
             Circlecount = 10;
 
-            if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1)       //ÉÏ¹Õµ¥²¹
+            if(Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1)       //ä¸Šæ‹å•è¡¥
             {
                 Circlecount = 10;
             }
         }
-        if(Circlecount == 10)                                                            //Ô²»·½áÊø
+        if(Circlecount == 10)                                                            //åœ†ç¯ç»“æŸ
         {
             EncoderSum_flag = 1;
             if(Left_Up_Point[1] >= 63 || (Real_Distance >= 4000 && CircleBig == 0) || (Real_Distance >= 5000 && CircleBig == 1))
@@ -373,13 +373,13 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         else if(CircleRight_flag == 1)
     {
         //Beepindex = BeepCircle;
-        if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 1 && findrcount > 6 && Circlecount == 0)  //ÉÏÏÂ¹Õ²¹Ïß
+        if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 1 && findrcount > 6 && Circlecount == 0)  //ä¸Šä¸‹æ‹è¡¥çº¿
         {
             Circlecount = 1;
         }
         if(Circlecount == 1)
         {
-            if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0 && Right_Down_Point[1] > 80)   //ÏÂ¹ÕÏûÊ§ÉÏ¹Õ²¹Ïß
+            if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0 && Right_Down_Point[1] > 80)   //ä¸‹æ‹æ¶ˆå¤±ä¸Šæ‹è¡¥çº¿
             {
                 Circlecount = 2;
             }
@@ -390,14 +390,14 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
 
             }
             if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1
-            && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && findrcount <= 3 && Right_Up_Point[1] > 15)        //ÉÏ¹ÕĞ±²¹Ïß½ø»·
+            && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && findrcount <= 3 && Right_Up_Point[1] > 15)        //ä¸Šæ‹æ–œè¡¥çº¿è¿›ç¯
             {
                 Circlecount = 4;
             }
         }
 //        if(Circlecount == 12)
 //        {
-//            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)    //ÏÂ¹Õ³öÏÖ£¬µÈÉÏ¹Õ
+//            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)    //ä¸‹æ‹å‡ºç°ï¼Œç­‰ä¸Šæ‹
 //            {
 //                Circlecount = 3;
 //            }
@@ -425,7 +425,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
 //        }
         if(Circlecount == 2)
         {
-            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)    //ÏÂ¹Õ³öÏÖ£¬µÈÉÏ¹Õ
+            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)    //ä¸‹æ‹å‡ºç°ï¼Œç­‰ä¸Šæ‹
             {
                 Circlecount = 3;
             }
@@ -446,7 +446,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         if(Circlecount == 3)
         {
             if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1
-            && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite)        //ÉÏ¹ÕĞ±²¹Ïß½ø»·
+            && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite)        //ä¸Šæ‹æ–œè¡¥çº¿è¿›ç¯
             {
                 Circlecount = 4;
 
@@ -474,9 +474,9 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
             }
             RX = Right_Up_Point[0];
             RY = Right_Up_Point[1];
-            if(Right_Up_Point_finish_flag == 0 && Real_Distance >= 4500)        //ÏÂ¹ÕÏûÊ§£¬ÉÏ¹ÕĞ±²¹Ïß½ø»·
+            if(Right_Up_Point_finish_flag == 0 && Real_Distance >= 4500)        //ä¸‹æ‹æ¶ˆå¤±ï¼Œä¸Šæ‹æ–œè¡¥çº¿è¿›ç¯
             {
-                if(Emo_Angle <= -28)        //¹ÕÈë³É¹¦
+                if(Emo_Angle <= -28)        //æ‹å…¥æˆåŠŸ
                 {
                     need_cornerR = 0;
                     Auxiliary_CorneringRight_flag = 0;
@@ -485,7 +485,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
                     EncoderSum_flag = 0;
                     Paddingcurve = 0;
                 }
-                else                     //¹ÕÈëÊ§°Ü
+                else                     //æ‹å…¥å¤±è´¥
                 {
                     CircleBig = 0;
                     need_cornerR = 0;
@@ -521,7 +521,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         if(Circlecount == 6)
         {
             //CircleInTrial();
-            if(Left_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)                  //×ó¹Õ³öÏÖ£¬½øĞĞ×ó¹ÕĞ±²¹Ïß³ö»·
+            if(Left_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)                  //å·¦æ‹å‡ºç°ï¼Œè¿›è¡Œå·¦æ‹æ–œè¡¥çº¿å‡ºç¯
             {
                 Circlecount = 7;
             }
@@ -533,7 +533,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
             Gyroscope_Star_flag = 1;
             EncoderSum_flag = 1;
             if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0 && Left_Down_Point_finish_flag == 0
-                 && Real_Distance >= 3800  && Emo_Angle <-38)   //³ö¿Ú³ö¶øÏÂ¹Õ³öÏÖÉÏ¹ÕÎŞ
+                 && Real_Distance >= 3800  && Emo_Angle <-38)   //å‡ºå£å‡ºè€Œä¸‹æ‹å‡ºç°ä¸Šæ‹æ— 
             {
                 //Auxiliary_CorneringRight_flag = 0;
                 //need_cornerR = 0;
@@ -543,7 +543,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
                 Circlecount = 8;
             }
             else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0
-                    && Real_Distance >= 3800 && Emo_Angle <-38)  //³ö¿Ú³öÉÏÏÂ¹Õ¶¼ÓĞ
+                    && Real_Distance >= 3800 && Emo_Angle <-38)  //å‡ºå£å‡ºä¸Šä¸‹æ‹éƒ½æœ‰
             {
                 //Auxiliary_CorneringRight_flag = 0;
                 //need_cornerR = 0;
@@ -553,7 +553,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
                 Circlecount = 9;
             }
             else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0
-                    && Real_Distance >= 3800 && Emo_Angle <-38)  //ÏÂ¹Õµ¥²¹
+                    && Real_Distance >= 3800 && Emo_Angle <-38)  //ä¸‹æ‹å•è¡¥
             {
                 //Auxiliary_CorneringRight_flag = 0;
                 //need_cornerR = 0;
@@ -571,7 +571,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
             {
                 Circlecount = 9;
             }
-            else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1)  //ÉÏ¹Õµ¥²¹
+            else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1)  //ä¸Šæ‹å•è¡¥
             {
                 Circlecount = 10;
             }
@@ -580,7 +580,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         {
             Circlecount = 10;
 
-            if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1)  //ÉÏ¹Õµ¥²¹
+            if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1)  //ä¸Šæ‹å•è¡¥
             {
                 Circlecount = 10;
             }
@@ -588,7 +588,7 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         if(Circlecount == 10)
         {
             EncoderSum_flag = 1;
-            if(Right_Up_Point[1] >= 60 || (Real_Distance >= 3500 && CircleBig == 0) || (Real_Distance >= 4500 && CircleBig == 1))     //Ô²»·½áÊø
+            if(Right_Up_Point[1] >= 60 || (Real_Distance >= 3500 && CircleBig == 0) || (Real_Distance >= 4500 && CircleBig == 1))     //åœ†ç¯ç»“æŸ
             {
                 Circlecount = 11;
                 EncoderSum_flag = 0;
@@ -745,18 +745,18 @@ if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlco
         
         
         
-Æ«²î£º
+åå·®ï¼š
 void Calculate_Offset_1()
 {
       offset =0;
-      for(uint8 y =MT9V03X_H -1; y >=10; y--)    //ÀûÓÃ½ü´óÔ¶Ğ¡µÄÈ¨ÖØ¼ÆËãÆ«²î(µ÷ÊÔÍê³É)
+      for(uint8 y =MT9V03X_H -1; y >=10; y--)    //åˆ©ç”¨è¿‘å¤§è¿œå°çš„æƒé‡è®¡ç®—åå·®(è°ƒè¯•å®Œæˆ)
       {
-          m_line_x[y] =1.0*(l_line_x[y] +r_line_x[y])/2;    //Õâ¾ä´úÂë²¢²»ÊÇÃ»ÓĞÓÃ,Ç§Íò²»¿ÉÒÔÉ¾
+          m_line_x[y] =1.0*(l_line_x[y] +r_line_x[y])/2;    //è¿™å¥ä»£ç å¹¶ä¸æ˜¯æ²¡æœ‰ç”¨,åƒä¸‡ä¸å¯ä»¥åˆ 
       }
 
-      HDPJ_lvbo(m_line_x, 20, MT9V03X_H -1);   //Æ½¾ù»¬¶¯ÂË²¨
+      HDPJ_lvbo(m_line_x, 20, MT9V03X_H -1);   //å¹³å‡æ»‘åŠ¨æ»¤æ³¢
 
-      for(uint8 y =MT9V03X_H -30; y >=MT9V03X_H -40; y--)    //ÀûÓÃ½ü´óÔ¶Ğ¡µÄÈ¨ÖØ¼ÆËãÆ«²î(µ÷ÊÔÍê³É)
+      for(uint8 y =MT9V03X_H -30; y >=MT9V03X_H -40; y--)    //åˆ©ç”¨è¿‘å¤§è¿œå°çš„æƒé‡è®¡ç®—åå·®(è°ƒè¯•å®Œæˆ)
       {
           offset +=offset_quanzhong[MT9V03X_H-30 -y] *(m_line_x[y] -MT9V03X_W/2);
       }
@@ -773,7 +773,7 @@ void Calculate_Offset_1()
 }
 
 
-Æ½»¬£º
+å¹³æ»‘ï¼š
 int16 Sum1;
 void HDPJ_lvbo(uint8 data[], uint8 N, uint8 size)
 {

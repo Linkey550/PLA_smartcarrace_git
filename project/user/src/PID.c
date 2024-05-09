@@ -143,7 +143,7 @@ void PID_DirveUse(PID_struct *pid1,PID_struct *pid2)
              if(pid1->output>0)
              {
              PWM[2]=1;
-             PWM[3]=1000+(pid1->output);
+             PWM[3]=1200+(pid1->output);
              pwm_set_duty(MOTOR_PWM_L,PWM[2]);
              pwm_set_duty(MOTOR_PWM_R,PWM[3]);
              }
@@ -156,7 +156,7 @@ void PID_DirveUse(PID_struct *pid1,PID_struct *pid2)
       //              }
              else if(pid1->output<=0)
              {
-             PWM[2]=1000-(pid1->output);
+             PWM[2]=1200-(pid1->output);
              PWM[3]=1;
              pwm_set_duty(MOTOR_PWM_L,PWM[2]);
              pwm_set_duty(MOTOR_PWM_R,PWM[3]);
@@ -174,13 +174,13 @@ void PID_DirveUse(PID_struct *pid1,PID_struct *pid2)
          if(pid1->output>=0)
          {
          PWM[2]=0;
-         PWM[3]=1200+(pid1->output);
+         PWM[3]=950+(pid1->output);
          pwm_set_duty(MOTOR_PWM_L,PWM[2]);
          pwm_set_duty(MOTOR_PWM_R,PWM[3]);
          }
          else if(pid1->output<0)
          {
-         PWM[2]=1200-(pid1->output);
+         PWM[2]=950-(pid1->output);
          PWM[3]=0;
          pwm_set_duty(MOTOR_PWM_L,PWM[2]);
          pwm_set_duty(MOTOR_PWM_R,PWM[3]);

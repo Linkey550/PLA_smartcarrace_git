@@ -2078,11 +2078,12 @@ void CircleOutPoint(void)
 //  @return     void
 //  @note
 //-------------------------------------------------------------------------------------------------------------------
-//static unsigned char circlrsu = 0;
+static unsigned char circlrsu = 0;
 void Circle_supplement(void)
 {
-    if(CornerLeft_flag == 0 && CornerRight_flag == 0 && Corners_flag == 0  && findrcount <= 4
-    && Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Right_Up_Point[1] >= 25 && Right_Up_Point[1] <= 50 && Right_Up_Point[0] < 145 && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 0
+    if(CornerLeft_flag == 0 && CornerRight_flag == 0 && Corners_flag == 0
+    && Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Right_Up_Point[1] >= 25
+    && Right_Up_Point[1] <= 50 && Right_Up_Point[0] < 145 && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 0
     && WindupL_flag == 0 && WindupR_flag == 0
     && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
     && camera_p.Garage_In_flag == 0 && Cross_flag == 0 && CornerS_flag == 0
@@ -2093,20 +2094,128 @@ void Circle_supplement(void)
     && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[Emo_two_third(105,Right_Up_Point[1])]
     && Left_Black_Point[Emo_two_third(105,Right_Up_Point[1])] >  Left_Black_Point[105]
     && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[105]
-    && Emo_imag[Right_Up_Point[1] - 1][Right_Up_Point[0] + 10] == EmoWhite
-    && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 10] == EmoWhite
-    )//&& Right_Black_Point[112] == 187 && Right_Black_Point[113] == 187 && Right_Black_Point[115] == 187
+    && Emo_imag[Right_Up_Point[1] + 5][Right_Up_Point[0] + 10] == EmoWhite
+    && Emo_imag[Right_Up_Point[1] - 5][Right_Up_Point[0] - 10] == EmoWhite
+    &&  Left_Black_Point[Right_Up_Point[1]] == EmoBlack && Left_Black_Point[Right_Up_Point[1] - 10] == EmoBlack
+    )//&& Right_Black_Point[112] == 187 && Right_Black_Point[113] == 187 && Right_Black_Point[115] == 187  && findrcount <= 4
     {
         CircleRight_flag = 1;
     }
-    if(CornerLeft_flag == 0 && CornerRight_flag == 0 && WindupL_flag == 0 && WindupR_flag == 0
-       && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0 && camera_p.Garage_In_flag == 0
-       && Emo_imag[Left_Up_Point[1] - 5][Left_Up_Point[0] + 20] == EmoWhite && Emo_imag[Left_Up_Point[1] + 15][Left_Up_Point[0] - 15] == EmoWhite
-       && Left_Up_Point[1] >= 20 && Right_Up_Point[1] == 0 && Right_Down_Point[1] == 0
-       && Emo_u8Decabs(Right_Black_Point[Left_Up_Point[1]],Right_Black_Point[Left_Up_Point[1]+30])<20 && Emo_u8Decabs(Right_Black_Point[Left_Up_Point[1]],Right_Black_Point[Left_Up_Point[1]+15])<10)
+//    if(CornerLeft_flag == 0 && CornerRight_flag == 0 && WindupL_flag == 0 && WindupR_flag == 0
+//       && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0 && camera_p.Garage_In_flag == 0
+//       && Emo_imag[Left_Up_Point[1] - 5][Left_Up_Point[0] + 20] == EmoWhite && Emo_imag[Left_Up_Point[1] + 15][Left_Up_Point[0] - 15] == EmoWhite
+//       && Left_Up_Point[1] >= 20 && Right_Up_Point[1] == 0 && Right_Down_Point[1] == 0
+//       && Emo_u8Decabs(Right_Black_Point[Left_Up_Point[1]],Right_Black_Point[Left_Up_Point[1]+30])<20 && Emo_u8Decabs(Right_Black_Point[Left_Up_Point[1]],Right_Black_Point[Left_Up_Point[1]+15])<10)
+   if(CornerLeft_flag == 0 && CornerRight_flag == 0 && Corners_flag == 0&& Right_Down_Point_finish_flag == 0
+    && Right_Up_Point_finish_flag == 0 && Left_Up_Point[1] >= 25 && Left_Up_Point[1] <= 50 && Left_Up_Point[0] > 45
+    && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
+    && camera_p.Garage_In_flag == 0 && WindupL_flag == 0 && WindupR_flag == 0
+    && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
+    && Cross_flag == 0 && Trifork_flag == 0 && CornerS_flag == 0
+    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
+    && Right_Black_Point[(Left_Up_Point[1]+105)/2] <  Right_Black_Point[105]
+    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])]
+    && Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
+    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_two_third(105,Left_Up_Point[1])]
+    && Right_Black_Point[Emo_two_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
+    && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[105]
+    && Emo_imag[Left_Up_Point[1]][Left_Up_Point[0] - 10] == EmoWhite
+    && Emo_imag[Left_Up_Point[1] - 1][Left_Up_Point[0] - 10] == EmoWhite
+    && Right_Black_Point[Left_Up_Point[1]] == EmoBlack && Right_Black_Point[Left_Up_Point[1] - 10] == EmoBlack)//&& findrcount <= 4 && Left_Black_Point[112] == 0 && Left_Black_Point[113] == 0 && Left_Black_Point[115] == 0
     {
         CircleLeft_flag = 1;
     }
+
+  else if(dieReady == 2 && CornerLeft_flag == 0 && CornerRight_flag == 0 && Corners_flag == 0  
+  && Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Right_Up_Point[1] >= 25 && Right_Up_Point[1] <= 66 && Right_Up_Point[0] < 165 && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 0
+  && WindupL_flag == 0 && WindupR_flag == 0
+  && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
+  && camera_p.Garage_In_flag == 0 && Cross_flag == 0 && Trifork_flag == 0
+  && RampReady_flag == 0 && CornerS_flag == 0 && Ramp_flag == 0
+  && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[(Right_Up_Point[1]+105)/2]
+  && Left_Black_Point[(Right_Up_Point[1]+105)/2] >  Left_Black_Point[105]
+  && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[Emo_one_third(105,Right_Up_Point[1])]
+  && Left_Black_Point[Emo_one_third(105,Right_Up_Point[1])] >  Left_Black_Point[105]
+  && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[Emo_two_third(105,Right_Up_Point[1])]
+  && Left_Black_Point[Emo_two_third(105,Right_Up_Point[1])] >  Left_Black_Point[105]
+  && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[105]
+  && Left_Black_Point[10] > Left_Black_Point[Right_Up_Point[1]] && Left_Black_Point[10] > Left_Black_Point[(Right_Up_Point[1]+10)/2]
+  && Right_Black_Point[Right_Up_Point[1]] <= Right_Black_Point[Right_Up_Point[1]+1] && Right_Black_Point[Right_Up_Point[1]+1] <= Right_Black_Point[Right_Up_Point[1]+2]
+  && Right_Black_Point[Right_Up_Point[1]+2] <= Right_Black_Point[Right_Up_Point[1]+3] && Right_Black_Point[Right_Up_Point[1]+3] <= Right_Black_Point[Right_Up_Point[1]+4]
+  && Right_Black_Point[Right_Up_Point[1]+4] <= Right_Black_Point[Right_Up_Point[1]+5] && Right_Black_Point[Right_Up_Point[1]+5] <= Right_Black_Point[Right_Up_Point[1]+6]
+  && Right_Black_Point[Right_Up_Point[1]] < Right_Black_Point[Right_Up_Point[1]+5] && Right_Black_Point[Right_Up_Point[1]+1] < Right_Black_Point[Right_Up_Point[1]+6]
+  && Right_Black_Point[Right_Up_Point[1]] < Right_Black_Point[Right_Up_Point[1]+8] && Right_Black_Point[Right_Up_Point[1]+1] < Right_Black_Point[Right_Up_Point[1]+9]
+  && Right_Black_Point[Right_Up_Point[1]] < Right_Black_Point[Right_Up_Point[1]+11] && Right_Black_Point[Right_Up_Point[1]+1] < Right_Black_Point[Right_Up_Point[1]+12])
+  {
+      for(uint8 y=Right_Up_Point[1] - 3;y>=5;y--)
+      {
+          if(circlrsu == 0 && Right_Black_Point[y] <= Right_Black_Point[y-1] && Right_Black_Point[y-1] <= Right_Black_Point[y-2] && Right_Black_Point[y] < Right_Black_Point[y-2] )
+          {
+              circlrsu = 1;
+          }
+          if(circlrsu == 1)
+          {
+              if(Right_Black_Point[y] <= 187 && Right_Black_Point[y-1] >= 177 && Right_Black_Point[y-2] >= 177)
+              {
+                  CircleRight_flag = 1;
+     
+                  circlrsu = 0;
+                  break;
+              }
+          }
+          if(y == 5)
+          {
+              circlrsu = 0;
+              break;
+          }
+
+      }
+  }
+  else if(CornerLeft_flag == 0 && CornerRight_flag == 0 && Corners_flag == 0  
+  && Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 0 && Left_Up_Point[1] >= 25 && Left_Up_Point[1] <= 66 && Left_Up_Point[0] > 25 && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
+  && WindupL_flag == 0 && WindupR_flag == 0
+  && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
+  && camera_p.Garage_In_flag == 0 && Cross_flag == 0 && Trifork_flag == 0
+  && RampReady_flag == 0 && CornerS_flag == 0 && Ramp_flag == 0
+  && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
+  && Right_Black_Point[(Left_Up_Point[1]+105)/2] <  Right_Black_Point[105]
+  && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])]
+  && Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
+  && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_two_third(105,Left_Up_Point[1])]
+  && Right_Black_Point[Emo_two_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
+  && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[105]
+  && Right_Black_Point[10] < Right_Black_Point[Left_Up_Point[1]] && Right_Black_Point[10] < Right_Black_Point[(Left_Up_Point[1]+10)/2]
+  && Left_Black_Point[Left_Up_Point[1]] >= Left_Black_Point[Left_Up_Point[1]+1] && Left_Black_Point[Left_Up_Point[1]+1] >= Left_Black_Point[Left_Up_Point[1]+2]
+  && Left_Black_Point[Left_Up_Point[1]+2] >= Left_Black_Point[Left_Up_Point[1]+3] && Left_Black_Point[Left_Up_Point[1]+3] >= Left_Black_Point[Left_Up_Point[1]+4]
+  && Left_Black_Point[Left_Up_Point[1]+4] >= Left_Black_Point[Left_Up_Point[1]+5] && Left_Black_Point[Left_Up_Point[1]+5] >= Left_Black_Point[Left_Up_Point[1]+6]
+  && Left_Black_Point[Left_Up_Point[1]] > Left_Black_Point[Left_Up_Point[1]+5] && Left_Black_Point[Left_Up_Point[1]+1] > Left_Black_Point[Left_Up_Point[1]+6]
+  && Left_Black_Point[Left_Up_Point[1]] > Left_Black_Point[Left_Up_Point[1]+8] && Left_Black_Point[Left_Up_Point[1]+1] > Left_Black_Point[Left_Up_Point[1]+9]
+  && Left_Black_Point[Left_Up_Point[1]] > Left_Black_Point[Left_Up_Point[1]+11] && Left_Black_Point[Left_Up_Point[1]+1] > Left_Black_Point[Left_Up_Point[1]+12])
+  {
+      for(uint8 y=Left_Up_Point[1] - 3;y>=5;y--)
+      {
+          if(circlrsu == 0 && Left_Black_Point[y] >= Left_Black_Point[y-1] && Left_Black_Point[y-1] >= Left_Black_Point[y-2] && Left_Black_Point[y] > Left_Black_Point[y-2] )
+          {
+              circlrsu = 1;
+          }
+          if(circlrsu == 1)
+          {
+              if(Left_Black_Point[y] >= 0 && Left_Black_Point[y-1] <= 10 && Left_Black_Point[y-2] <= 10)
+              {
+                  CircleLeft_flag = 1;
+                  Circlecount = 12;
+                  //CircleBig = 1;
+                  circlrsu = 0;
+                  break;
+              }
+          }
+          if(y == 5)
+          {
+              circlrsu = 0;
+              break;
+          }
+      }
+  }
 
 
 }
@@ -2142,8 +2251,8 @@ void Circle(void)
                {
                    Circlecount = 2;
                }
-               else if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1 && findlcount <= 3
-                   && Emo_imag[Left_Up_Point[1] + 5][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)
+               else if(Left_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 1
+                   && Emo_imag[Left_Up_Point[1] + 5][Left_Up_Point[0] - 5] == EmoWhite && Left_Up_Point[1] > 15)//&& findlcount <= 3
                {
                    Circlecount = 4;
                }
@@ -2155,7 +2264,7 @@ void Circle(void)
            }
            if(Circlecount == 2)
            {
-               if(Left_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0)    //下拐出现，等上拐
+               if(Left_Down_Point_finish_flag == 1 || Left_Up_Point_finish_flag == 0)    //下拐出现，等上拐
                {
                    Circlecount = 3;
                }
@@ -2212,15 +2321,15 @@ void Circle(void)
                        EncoderSum_flag = 0;
                        CC = 0;
                    }
-                   else                                  //拐入失败
-                   {
-                       CircleLeft_flag = 0;
-                       Circlecount = 0;
-                       PaddingR = 0;
-                       PaddingL = 0;
-                       Paddingcurve = 0;
-                       CC = 0;
-                   }
+//                   else                                  //拐入失败
+//                   {
+//                       CircleLeft_flag = 0;
+//                       Circlecount = 0;
+//                       PaddingR = 0;
+//                       PaddingL = 0;
+//                       Paddingcurve = 0;
+//                       CC = 0;
+//                   }
                }
            }
            if(Circlecount == 5)
@@ -2228,7 +2337,7 @@ void Circle(void)
                await++;
                if(await >= 3)
                {
-                   if(Emo_Angle > 40)
+                   if(Emo_Angle > 30)
                    {
                        Circlecount = 6;
                        await = 0;
@@ -2237,7 +2346,7 @@ void Circle(void)
            }
            if(Circlecount == 6)
            {
-               if(Right_Down_Point_finish_flag == 1 && Left_Up_Point_finish_flag == 0)       //右拐出现，进行右拐斜补线出环
+               if(Right_Down_Point_finish_flag == 1 || Left_Up_Point_finish_flag == 0)       //右拐出现，进行右拐斜补线出环
                {
                    Circlecount = 7;
                }
@@ -2258,8 +2367,6 @@ void Circle(void)
 
                {
                    Paddingcurve = 0;
-                   Gyroscope_Star_flag = 0;
-                   EncoderSum_flag = 0;
                    Circlecount = 9;
 
                }
@@ -2291,10 +2398,11 @@ void Circle(void)
            }
            if(Circlecount == 10)                                                            //圆环结束
            {
-
-               if(Left_Up_Point[1] >= 63)
+               await++;
+               if(await == 3)
                {
-                   Circlecount = 11;
+                   Circlecount = 11; //圆环结束
+                   await = 0;
                }
            }
         switch(Circlecount)
@@ -2392,30 +2500,28 @@ void Circle(void)
                 CircleLeft_flag = 0;
                 CircleBig = 0;
                 Corners_flag = 0;
-                //Near_Corners_flag = 0;
                 Circlecount = 0;
                 PaddingR = 0;
                 PaddingL = 0;
-                //Beepindex = 0;
                 Circle_RC++;
                 break;
         }
 
     }
-    else if(CircleRight_flag == 1)
+   else if(CircleRight_flag == 1)
     {
-        if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 1 && findrcount > 6 && Circlecount == 0)  //上下拐补线
+        if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 1 && Circlecount == 0)  //上下拐补线&& findrcount > 6
         {
             Circlecount = 1;
         }
         if(Circlecount == 1)
         {
-            if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0 && Right_Down_Point[1] > 80)   //下拐消失上拐补线
+            if(Right_Up_Point_finish_flag == 1 && Right_Down_Point_finish_flag == 0 && Right_Down_Point[1] > 60)   //下拐消失上拐补线
             {
                 Circlecount = 2;
             }
             else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1
-                && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite && findrcount <= 3 && Right_Up_Point[1] > 15)
+                && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite  && Right_Up_Point[1] > 15)//&& findrcount <= 3
             {
                 Circlecount = 4;
 
@@ -2428,7 +2534,7 @@ void Circle(void)
         }
         if(Circlecount == 2)
         {
-            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0)    //下拐出现，等上拐
+            if(Right_Down_Point_finish_flag == 1 || Right_Up_Point_finish_flag == 0)    //下拐出现，等上拐
             {
                 Circlecount = 3;
             }
@@ -2449,7 +2555,7 @@ void Circle(void)
         if(Circlecount == 3)
         {
             if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1
-            && Emo_imag[Right_Up_Point[1]][Right_Up_Point[0] + 5] == EmoWhite)        //上拐斜补线进环
+            && Emo_imag[Right_Up_Point[1] + 5][Right_Up_Point[0] + 10] == EmoWhite)        //上拐斜补线进环
             {
                 Circlecount = 4;
 
@@ -2476,24 +2582,22 @@ void Circle(void)
             RY = Right_Up_Point[1];
             if(Right_Up_Point_finish_flag == 0)        //下拐消失，上拐斜补线进环
             {
-                if(Emo_Angle <= -40)        //拐入成功
+                if(Emo_Angle <= -45)        //拐入成功
                 {
-                    need_cornerR = 0;
-                    Auxiliary_CorneringRight_flag = 0;
-                    Gyroscope_Star_flag = 0;
                     Circlecount = 5;
-                    EncoderSum_flag = 0;
                     Paddingcurve = 0;
+                    await=0;
                 }
-                else                                  //拐入失败
-                {
-                    CircleRight_flag = 0;
-                    Circlecount = 0;
-                    PaddingR = 0;
-                    PaddingL = 0;
-                    Paddingcurve = 0;
-                    CC = 0;
-                }
+//                else                                  //拐入失败
+//                {
+//                    CircleRight_flag = 0;
+//                    Circlecount = 0;
+//                    PaddingR = 0;
+//                    PaddingL = 0;
+//                    Paddingcurve = 0;
+//                    CC = 0;
+//                    await=0;
+//                }
             }
         }
         if(Circlecount == 5)
@@ -2501,11 +2605,9 @@ void Circle(void)
             await++;
             if(await >= 3)
             {
-              if(Emo_Angle < -28)
+              if(Emo_Angle < -45)
                 {
                     Circlecount = 6;
-                    Gyroscope_Star_flag = 0;
-                    EncoderSum_flag = 0;
                     await = 0;
                 }
                }
@@ -2521,34 +2623,19 @@ void Circle(void)
         {
             Paddingcurve = 1;
             CircleOutPoint();
-            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0 && Left_Down_Point_finish_flag == 0
-                 )   //出口出而下拐出现上拐无&& Real_Distance >= 3800  && Emo_Angle <-38
+            if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 0 && Left_Down_Point_finish_flag == 0)   //出口出而下拐出现上拐无&& Real_Distance >= 3800  && Emo_Angle <-38
             {
-                //Auxiliary_CorneringRight_flag = 0;
-                //need_cornerR = 0;
                 Paddingcurve = 0;
-                Gyroscope_Star_flag = 0;
-                EncoderSum_flag = 0;
                 Circlecount = 8;
             }
-            else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0
-                   )  //出口出上下拐都有 && Real_Distance >= 3800 && Emo_Angle <-38
+            else if(Right_Down_Point_finish_flag == 1 && Right_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0)  //出口出上下拐都有 && Real_Distance >= 3800 && Emo_Angle <-38
             {
-                //Auxiliary_CorneringRight_flag = 0;
-                //need_cornerR = 0;
                 Paddingcurve = 0;
-                Gyroscope_Star_flag = 0;
-                EncoderSum_flag = 0;
                 Circlecount = 9;
             }
-            else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0
-                   )  //下拐单补 && Real_Distance >= 3800 && Emo_Angle <-38
+            else if(Right_Down_Point_finish_flag == 0 && Right_Up_Point_finish_flag == 1 && Left_Down_Point_finish_flag == 0)  //下拐单补 && Real_Distance >= 3800 && Emo_Angle <-38
             {
-                //Auxiliary_CorneringRight_flag = 0;
-                //need_cornerR = 0;
                 Paddingcurve = 0;
-                Gyroscope_Star_flag = 0;
-                EncoderSum_flag = 0;
                 Circlecount = 10;
             }
         }
@@ -2575,10 +2662,11 @@ void Circle(void)
         }
         if(Circlecount == 10)
         {
-            EncoderSum_flag = 1;
-            if(Right_Up_Point[1] >= 60)     //圆环结束
+            await++;
+            if(await == 3)
             {
-                Circlecount = 11;
+                Circlecount = 11; //圆环结束
+                await = 0;
 
             }
         }
@@ -2679,21 +2767,19 @@ void Circle(void)
                 CircleRight_flag = 0;
                 Corners_flag = 0;
                 CircleBig = 0;
-                //Near_Corners_flag = 0;
                 Circlecount = 0;
                 PaddingR = 0;
                 PaddingL = 0;
-                //Beepindex = 0;
                 Circle_RC++;
                 break;
-            case 12 :
-                Link_Right_One_Point[0] = 187;
-                Link_Right_One_Point[1] = 119;
-                Link_Right_Two_Point[0] = Right_Up_Point[0];
-                Link_Right_Two_Point[1] = Right_Up_Point[1];
-                PaddingR = 1;
-                PaddingL = 0;
-                break;
+//            case 12 :
+//                Link_Right_One_Point[0] = 187;
+//                Link_Right_One_Point[1] = 119;
+//                Link_Right_Two_Point[0] = Right_Up_Point[0];
+//                Link_Right_Two_Point[1] = Right_Up_Point[1];
+//                PaddingR = 1;
+//                PaddingL = 0;
+//                break;
         }
 
     }
@@ -3269,7 +3355,7 @@ void Camera_Head(void)        //摄像头处理总函数
                 {
                  if((camera_p.T_X>80&&camera_p.T_X<98)&&camera_p.T_X!=93)
                 {
-                    camera_p.N_X = 93;
+                    camera_p.N_X = 90;
                     flag_start = 1;
                 }
                 }
