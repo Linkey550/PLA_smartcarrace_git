@@ -1,2 +1,2 @@
 sdk/Core/core_riscv.o: \
- F:/飞卡智能视觉/v5.0/libraries/sdk/Core/core_riscv.c
+ F:/飞卡智能视觉/git_smartcar/PLA_smartcarrace_git/libraries/sdk/Core/core_riscv.c

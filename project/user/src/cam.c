@@ -2111,7 +2111,7 @@ void Circle_supplement(void)
     && Left_Down_Point_finish_flag == 0 && Left_Up_Point_finish_flag == 1
     && camera_p.Garage_In_flag == 0 && WindupL_flag == 0 && WindupR_flag == 0
     && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
-    && Cross_flag == 0 && Trifork_flag == 0 && CornerS_flag == 0
+    && Cross_flag == 0 && CornerS_flag == 0
     && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
     && Right_Black_Point[(Left_Up_Point[1]+105)/2] <  Right_Black_Point[105]
     && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])]
@@ -2131,7 +2131,7 @@ void Circle_supplement(void)
   && WindupL_flag == 0 && WindupR_flag == 0
   && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
   && camera_p.Garage_In_flag == 0 && Cross_flag == 0 && Trifork_flag == 0
-  && RampReady_flag == 0 && CornerS_flag == 0 && Ramp_flag == 0
+  && CornerS_flag == 0
   && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[(Right_Up_Point[1]+105)/2]
   && Left_Black_Point[(Right_Up_Point[1]+105)/2] >  Left_Black_Point[105]
   && Left_Black_Point[Right_Up_Point[1]] > Left_Black_Point[Emo_one_third(105,Right_Up_Point[1])]
@@ -2176,8 +2176,7 @@ void Circle_supplement(void)
   && WindupL_flag == 0 && WindupR_flag == 0
   && SlalomLeft_flag == 0 && SlalomRight_flag == 0 && CircleLeft_flag == 0 && CircleRight_flag == 0
   && camera_p.Garage_In_flag == 0 && Cross_flag == 0 && Trifork_flag == 0
-  && RampReady_flag == 0 && CornerS_flag == 0 && Ramp_flag == 0
-  && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
+  && CornerS_flag == 0 && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[(Left_Up_Point[1]+105)/2]
   && Right_Black_Point[(Left_Up_Point[1]+105)/2] <  Right_Black_Point[105]
   && Right_Black_Point[Left_Up_Point[1]] < Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])]
   && Right_Black_Point[Emo_one_third(105,Left_Up_Point[1])] <  Right_Black_Point[105]
