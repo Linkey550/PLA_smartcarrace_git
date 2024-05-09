@@ -10,9 +10,11 @@
 
 #define WIFI_SSID_TEST          "ppFFS"
 #define WIFI_PASSWORD_TEST      "lhr040210" // 如果需要连接的WIFI 没有密码则需要将 这里 替换为 NULL
+//tests
 
+#define FLASH_SECTION_INDEX       (63)                                          // 存储数据用的扇区 倒数第一个扇区
+#define FLASH_PAGE_INDEX          (3)                                           // 存储数据用的页码 倒数第一个页码
 
-//这是一处更改test
 
 #define CHANNEL_NUMBER          (4)
 
@@ -75,6 +77,8 @@ PID_struct angv_pid;            //陀螺仪角速度pid结构体(内环pid)
 PID_struct speed_pid;            //速度环pid结构体(速度环pid)
 
 extern cam_parameter camera_p;
+void falsh_ReadPid(void);
+void falsh_SavePid(void);
 
 int main (void)
 {
@@ -100,9 +104,7 @@ int main (void)
 
     encoder_quad_init(ENCODER_QUADDEC, ENCODER_QUADDEC_A, ENCODER_QUADDEC_B);   // 初始化编码器模块与引脚 正交解码编码器模式
 
-    PID_Init(&camera_pid, 23, 0, 12, 300, 250);                                   //初始化外环pid
-    PID_Init(&angv_pid,11, 0, 1, 50, 1200);                                     //初始化内环pid
-    PID_Init(&speed_pid, 10000, 0, 2, 300, 4300);                                    //初始化速度环pid
+    falsh_ReadPid();                                                           //初始化pid
 
     pit_ms_init(PIT_CH, 100);                                                   // 初始化 PIT_CH0 为周期中断 100ms 周期
     interrupt_set_priority(PIT_PRIORITY, 0);                                    // 设置 PIT1 对周期中断的中断优先级为 0
@@ -188,15 +190,15 @@ void pit_handler (void)
 ////    Send_data(UART7,&encoder_data_quaddec_float,sizeof(float));//编码器计数值
 //    Send_data(UART7,&encoder_data_quaddec_v,sizeof(float));//编码器速度
 //    Send_data(UART7,&encoder_point,sizeof(float));//编码器速度
-//    Send_data(UART7,&(camera_pid.kp),sizeof(float));//P
-//    Send_data(UART7,&(camera_pid.ki),sizeof(float));//I
-//    Send_data(UART7,&(camera_pid.kd),sizeof(float));//D
-//    Send_data(UART7,&(angv_pid.kp),sizeof(float));//P
-//    Send_data(UART7,&(angv_pid.ki),sizeof(float));//I
-//    Send_data(UART7,&(angv_pid.kd),sizeof(float));//D
-//    Send_data(UART7,&(speed_pid.kp),sizeof(float));//P
-//    Send_data(UART7,&(speed_pid.ki),sizeof(float));//I
-//    Send_data(UART7,&(speed_pid.kd),sizeof(float));//D
+    Send_data(UART7,&(camera_pid.kp),sizeof(float));//P
+    Send_data(UART7,&(camera_pid.ki),sizeof(float));//I
+    Send_data(UART7,&(camera_pid.kd),sizeof(float));//D
+    Send_data(UART7,&(angv_pid.kp),sizeof(float));//P
+    Send_data(UART7,&(angv_pid.ki),sizeof(float));//I
+    Send_data(UART7,&(angv_pid.kd),sizeof(float));//D
+    Send_data(UART7,&(speed_pid.kp),sizeof(float));//P
+    Send_data(UART7,&(speed_pid.ki),sizeof(float));//I
+    Send_data(UART7,&(speed_pid.kd),sizeof(float));//D
     Send_data(UART7,&Garagecount,sizeof(float));//encoder_data_quaddec
     Send_data(UART7,&camera_p.Garage_In_flag,sizeof(float));
     Send_data(UART7,&camera_p.test1_flag,sizeof(float));
@@ -321,6 +323,10 @@ void uart7_rx_interrupt_handler (void)
                 {
                     speed_pid.kd=target_value;
                 }
+        else if(!strcmp(directives,"save"))//存储pid
+                  {
+                      falsh_SavePid();
+                  }
 
        //清空缓存区
        uart7_buff_i=0;
@@ -444,5 +450,55 @@ void wifi_spi(void)
 }
 
 
+void falsh_ReadPid(void)
+{
+    if(flash_check(FLASH_SECTION_INDEX, FLASH_PAGE_INDEX))                      // 判断是否有数据
+    {
+        flash_read_page_to_buffer(FLASH_SECTION_INDEX, FLASH_PAGE_INDEX);           // 将数据从 flash 读取到缓冲区
+        camera_pid.kp= flash_union_buffer[0].float_type ;                              // 向缓冲区第 0 个位置写入 float  数据
+        camera_pid.ki=flash_union_buffer[1].float_type ;                             // 向缓冲区第 1 个位置写入 uint32 数据
+        camera_pid.kd=flash_union_buffer[2].float_type ;                            // 向缓冲区第 2 个位置写入 int32  数据
+        camera_pid.maxIntegral=flash_union_buffer[3].float_type ;                            // 向缓冲区第 2 个位置写入 int32  数据
+        camera_pid.maxOutput=flash_union_buffer[4].float_type ;                            // 向缓冲区第 2 个位置写入 int32  数据
+        angv_pid.kp=flash_union_buffer[5].float_type ;                                  // 向缓冲区第 3 个位置写入 uint16 数据
+        angv_pid.ki=flash_union_buffer[6].float_type ;                                 // 向缓冲区第 4 个位置写入 int16  数据
+        angv_pid.kd=flash_union_buffer[7].float_type ;                                    // 向缓冲区第 5 个位置写入 uint8  数据
+        angv_pid.maxIntegral=flash_union_buffer[8].float_type ;                            // 向缓冲区第 2 个位置写入 int32  数据
+        angv_pid.maxOutput=flash_union_buffer[9].float_type ;                            // 向缓冲区第 2 个位置写入 int32  数据
+        speed_pid.kp=flash_union_buffer[10].float_type;                                   // 向缓冲区第 6 个位置写入 int8   数据
+        speed_pid.ki=flash_union_buffer[11].float_type;                                   // 向缓冲区第 6 个位置写入 int8   数据
+        speed_pid.kd=flash_union_buffer[12].float_type;                                   // 向缓冲区第 6 个位置写入 int8   数据
+        speed_pid.maxIntegral=flash_union_buffer[13].float_type;                            // 向缓冲区第 2 个位置写入 int32  数据
+        speed_pid.maxOutput=flash_union_buffer[14].float_type;                            // 向缓冲区第 2 个位置写入 int32  数据
+    }
+    else {
+        PID_Init(&camera_pid, 20, 0, 0, 50, 250);                                   //初始化外环pid
+        PID_Init(&angv_pid,11, 0, 0, 50, 1200);                                     //初始化内环pid
+        PID_Init(&speed_pid, 10000, 0, 0, 50, 4300);                                    //初始化速度环pid
+    }
 
+}
+
+
+void falsh_SavePid(void)
+{
+    flash_buffer_clear();                                                       // 清空缓冲区
+    flash_union_buffer[0].float_type  = camera_pid.kp;                              // 向缓冲区第 0 个位置写入 float  数据
+    flash_union_buffer[1].float_type = camera_pid.ki;                             // 向缓冲区第 1 个位置写入 uint32 数据
+    flash_union_buffer[2].float_type  = camera_pid.kd;                            // 向缓冲区第 2 个位置写入 int32  数据
+    flash_union_buffer[3].float_type  = camera_pid.maxIntegral;                            // 向缓冲区第 2 个位置写入 int32  数据
+    flash_union_buffer[4].float_type  = camera_pid.maxOutput;                            // 向缓冲区第 2 个位置写入 int32  数据
+    flash_union_buffer[5].float_type = angv_pid.kp;                                  // 向缓冲区第 3 个位置写入 uint16 数据
+    flash_union_buffer[6].float_type  = angv_pid.ki;                                 // 向缓冲区第 4 个位置写入 int16  数据
+    flash_union_buffer[7].float_type  = angv_pid.kd;                                    // 向缓冲区第 5 个位置写入 uint8  数据
+    flash_union_buffer[8].float_type  = angv_pid.maxIntegral;                            // 向缓冲区第 2 个位置写入 int32  数据
+    flash_union_buffer[9].float_type  = angv_pid.maxOutput;                            // 向缓冲区第 2 个位置写入 int32  数据
+    flash_union_buffer[10].float_type   = speed_pid.kp;                                   // 向缓冲区第 6 个位置写入 int8   数据
+    flash_union_buffer[11].float_type   = speed_pid.ki;                                   // 向缓冲区第 6 个位置写入 int8   数据
+    flash_union_buffer[12].float_type   = speed_pid.kd;                                   // 向缓冲区第 6 个位置写入 int8   数据
+    flash_union_buffer[13].float_type  = speed_pid.maxIntegral;                            // 向缓冲区第 2 个位置写入 int32  数据
+    flash_union_buffer[14].float_type  = speed_pid.maxOutput;                            // 向缓冲区第 2 个位置写入 int32  数据
+    flash_erase_sector(FLASH_SECTION_INDEX, FLASH_PAGE_INDEX);              // 擦除这一页
+    flash_write_page_from_buffer(FLASH_SECTION_INDEX, FLASH_PAGE_INDEX);        // 向指定 Flash 扇区的页码写入缓冲区数据
+}
 

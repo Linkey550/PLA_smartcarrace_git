@@ -1,53 +1,53 @@
 zf_device/zf_device_dl1b.o: \
- F:/飞卡智能视觉/v5.0/libraries/zf_device/zf_device_dl1b.c \
- F:\飞卡智能视觉\v5.0\libraries\zf_common/zf_common_debug.h \
- F:\飞卡智能视觉\v5.0\libraries\zf_common/zf_common_typedef.h \
- F:\飞卡智能视觉\v5.0\libraries\zf_driver/zf_driver_delay.h \
- F:\飞卡智能视觉\v5.0\libraries\zf_common/zf_common_clock.h \
- F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x.h \
- F:\飞卡智能视觉\v5.0\libraries\sdk\Core/core_riscv.h \
- F:\飞卡智能视觉\v5.0\libraries\zf_common/zf_common_typedef.h \
- F:\飞卡智能视觉\v5.0\libraries\zf_driver/zf_driver_exti.h \
- F:\飞卡智能视觉\v5.0\libraries\zf_driver/zf_driver_gpio.h \
- F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x_rcc.h \
- F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x.h \
- F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x_gpio.h \
- F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x_exti.h \
- F:\飞卡智能视觉\v5.0\libraries\zf_driver/zf_driver_soft_iic.h \
- F:/飞卡智能视觉/v5.0/libraries/zf_device/zf_device_dl1b.h \
- F:/飞卡智能视觉/v5.0/libraries/zf_device/zf_device_config.h \
- F:/飞卡智能视觉/v5.0/libraries/zf_device/zf_device_type.h
+ E:/PLA_smartcarrace_git/libraries/zf_device/zf_device_dl1b.c \
+ E:\PLA_smartcarrace_git\libraries\zf_common/zf_common_debug.h \
+ E:\PLA_smartcarrace_git\libraries\zf_common/zf_common_typedef.h \
+ E:\PLA_smartcarrace_git\libraries\zf_driver/zf_driver_delay.h \
+ E:\PLA_smartcarrace_git\libraries\zf_common/zf_common_clock.h \
+ E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x.h \
+ E:\PLA_smartcarrace_git\libraries\sdk\Core/core_riscv.h \
+ E:\PLA_smartcarrace_git\libraries\zf_common/zf_common_typedef.h \
+ E:\PLA_smartcarrace_git\libraries\zf_driver/zf_driver_exti.h \
+ E:\PLA_smartcarrace_git\libraries\zf_driver/zf_driver_gpio.h \
+ E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x_rcc.h \
+ E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x.h \
+ E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x_gpio.h \
+ E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x_exti.h \
+ E:\PLA_smartcarrace_git\libraries\zf_driver/zf_driver_soft_iic.h \
+ E:/PLA_smartcarrace_git/libraries/zf_device/zf_device_dl1b.h \
+ E:/PLA_smartcarrace_git/libraries/zf_device/zf_device_config.h \
+ E:/PLA_smartcarrace_git/libraries/zf_device/zf_device_type.h
 
-F:\飞卡智能视觉\v5.0\libraries\zf_common/zf_common_debug.h:
+E:\PLA_smartcarrace_git\libraries\zf_common/zf_common_debug.h:
 
-F:\飞卡智能视觉\v5.0\libraries\zf_common/zf_common_typedef.h:
+E:\PLA_smartcarrace_git\libraries\zf_common/zf_common_typedef.h:
 
-F:\飞卡智能视觉\v5.0\libraries\zf_driver/zf_driver_delay.h:
+E:\PLA_smartcarrace_git\libraries\zf_driver/zf_driver_delay.h:
 
-F:\飞卡智能视觉\v5.0\libraries\zf_common/zf_common_clock.h:
+E:\PLA_smartcarrace_git\libraries\zf_common/zf_common_clock.h:
 
-F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x.h:
+E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x.h:
 
-F:\飞卡智能视觉\v5.0\libraries\sdk\Core/core_riscv.h:
+E:\PLA_smartcarrace_git\libraries\sdk\Core/core_riscv.h:
 
-F:\飞卡智能视觉\v5.0\libraries\zf_common/zf_common_typedef.h:
+E:\PLA_smartcarrace_git\libraries\zf_common/zf_common_typedef.h:
 
-F:\飞卡智能视觉\v5.0\libraries\zf_driver/zf_driver_exti.h:
+E:\PLA_smartcarrace_git\libraries\zf_driver/zf_driver_exti.h:
 
-F:\飞卡智能视觉\v5.0\libraries\zf_driver/zf_driver_gpio.h:
+E:\PLA_smartcarrace_git\libraries\zf_driver/zf_driver_gpio.h:
 
-F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x_rcc.h:
+E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x_rcc.h:
 
-F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x.h:
+E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x.h:
 
-F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x_gpio.h:
+E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x_gpio.h:
 
-F:\飞卡智能视觉\v5.0\libraries\sdk\Peripheral/ch32v30x_exti.h:
+E:\PLA_smartcarrace_git\libraries\sdk\Peripheral/ch32v30x_exti.h:
 
-F:\飞卡智能视觉\v5.0\libraries\zf_driver/zf_driver_soft_iic.h:
+E:\PLA_smartcarrace_git\libraries\zf_driver/zf_driver_soft_iic.h:
 
-F:/飞卡智能视觉/v5.0/libraries/zf_device/zf_device_dl1b.h:
+E:/PLA_smartcarrace_git/libraries/zf_device/zf_device_dl1b.h:
 
-F:/飞卡智能视觉/v5.0/libraries/zf_device/zf_device_config.h:
+E:/PLA_smartcarrace_git/libraries/zf_device/zf_device_config.h:
 
-F:/飞卡智能视觉/v5.0/libraries/zf_device/zf_device_type.h:
+E:/PLA_smartcarrace_git/libraries/zf_device/zf_device_type.h:

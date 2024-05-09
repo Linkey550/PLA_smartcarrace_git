@@ -1,2 +1,2 @@
 sdk/Core/core_riscv.o: \
- F:/·É¿¨ÖÇÄÜÊÓ¾õ/v5.0/libraries/sdk/Core/core_riscv.c
+ E:/PLA_smartcarrace_git/libraries/sdk/Core/core_riscv.c
