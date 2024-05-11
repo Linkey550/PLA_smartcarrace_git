@@ -1,5 +1,5 @@
 #include "zf_common_headfile.h"
-
+//具体读yj901的通信协议，这里只是简单写了一个串口传输
 const uint8 yj901s_unluck[]={0xFF,0xAA,0x69,0x88,0xB5};
 const uint8 yj901s_init[]={0xFF,0xAA,0x01,0x08,0x00};
 const uint8 yj901s_save[]={0xFF,0xAA,0x00,0x00,0x00};
@@ -8,8 +8,6 @@ void YJ901S_init(void)
 {
     Send_data(UART8,yj901s_unluck,sizeof(yj901s_unluck));
     system_delay_ms(200);
-//    Send_data(UART8,yj901s_init,sizeof(yj901s_init));
-//    system_delay_ms(3000);
     Send_data(UART8,yj901s_z_zero,sizeof(yj901s_init));
     system_delay_ms(5000);
     Send_data(UART8,yj901s_save,sizeof(yj901s_save));
